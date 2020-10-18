@@ -33,7 +33,8 @@
 #' @examples
 #' here()
 #' \dontrun{
-#' here("some", "path", "below", "your", "project", "root.txt")
+#' here("some",
+#' "path", "below", "your", "project", "root.txt")
 #' here("some/path/below/your/project/root.txt")
 #' }
 here <- function(...) {
@@ -48,7 +49,7 @@ here <- function(...) {
 #'   Include reason in output of `dr_here()`, defaults to `TRUE`.
 #' @export
 dr_here <- function(show_reason = TRUE) {
-  message(format_dr_here(show_reason = show_reason))
+  message(format_dr_here(show_reason= show_reason))
 }
 
 #' @rdname here
@@ -68,9 +69,9 @@ set_here <- function(path = ".", verbose = TRUE) {
   file_path <- file.path(path, ".here")
 
   if (file.exists(file_path)) {
-    if (verbose) {
+    if (verbose)
       message("File .here already exists in ", path)
-    }
+
   } else {
     writeLines(character(), file_path)
     if (verbose) {
