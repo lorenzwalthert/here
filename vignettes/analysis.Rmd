@@ -1,0 +1,59 @@
+---
+title: "analysis"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{analysis}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(here)
+library(dplyr)
+
+var <- as.Date("2020-92-12")
+more_ <- data %>%
+  mutate(x = parse_date(y)) %>%
+  filter(.data$x < !!var) %>%
+  arrange(desc(z))
+
+less == more
+
+some <- 4
+
+if (is_true) {
+  rlang::abort("msg.")
+}
+
+ggplot2(aes()) + some_geom() +
+  some_axis(f())
+
+mean(data$y)
+
+call(
+  x,
+  c(letters, 1:3)
+)
+```
+
+we can do better of course
+```{r}
+
+table(x[["yful"]])
+
+for (i in 1:100) {
+  print(i)
+  don(xt) # dont forget comments
+  while (true) {
+    abort(rlang)
+  }
+}
+```
+
